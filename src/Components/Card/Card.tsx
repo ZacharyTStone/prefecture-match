@@ -1,6 +1,24 @@
+import React from "react";
 import "./Card.css";
 
-const Card = ({ card, handleChoice, flipped, disabled }) => {
+type CardType = {
+  src: string;
+  alt: string;
+};
+
+type CardProps = {
+  card: CardType;
+  handleChoice: (card: CardType) => void;
+  flipped: boolean;
+  disabled: boolean;
+};
+
+const Card: React.FC<CardProps> = ({
+  card,
+  handleChoice,
+  flipped,
+  disabled,
+}) => {
   const handleClick = () => {
     if (!disabled) {
       handleChoice(card);

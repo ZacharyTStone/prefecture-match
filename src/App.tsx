@@ -16,7 +16,7 @@ const API = "https://en.wikipedia.org/api/rest_v1/page/summary/";
 interface CardType {
   src: string;
   alt: string;
-  id: number;
+  id?: number;
   matched?: boolean;
 }
 
@@ -120,7 +120,7 @@ const App: FC = () => {
               card={card}
               handleChoice={handleChoice}
               flipped={
-                card === choices[0] || card === choices[1] || card.matched
+                card === choices[0] || card === choices[1] || !!card.matched
               }
               disabled={disabled}
             />

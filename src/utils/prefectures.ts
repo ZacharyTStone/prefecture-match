@@ -1,4 +1,10 @@
-export const cardImages = [
+interface Prefecture {
+  src: string;
+  matched: boolean;
+  alt: string;
+}
+
+export const cardImages: Prefecture[] = [
   { src: "/images/aomori.jpg", matched: false, alt: "Aomori_Prefecture" },
   { src: "/images/aichi.jpg", matched: false, alt: "Aichi_Prefecture" },
   { src: "/images/akita.jpg", matched: false, alt: "Akita_Prefecture" },
